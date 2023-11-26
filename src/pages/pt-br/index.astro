@@ -1,0 +1,13 @@
+---
+import { getCollection } from "astro:content";
+import { getLangFromUrl, useTranslations  } from '../../i18n/utils';
+import Base from "../../layouts/Base.astro"
+
+const pages = await getCollection('blog');
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+---
+<Base title={t('meta.title')} description={t('meta.description')}>
+    <h1>Seja bem-vindo a minha jornada pessoal</h1>
+</Base>

@@ -1,0 +1,32 @@
+---
+import { getLangFromUrl, useTranslations, useTranslatedPath  } from '../i18n/utils';
+import LanguagePicker from '../components/LanguagePicker.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+
+<nav class="navbar bg-neutral">
+    <div class="navbar-start flex gap-2">
+        <a class="btn btn-ghost text-xl" href={translatePath('/')}>
+            Hederson Boechat
+        </a>
+        
+    </div>
+    <div class="navbar-end">        
+        <ul class="menu menu-horizontal px-1">
+            <li>
+                <a href={translatePath('/about/')}>
+                    {t('nav.about')}
+                </a>
+            </li>
+            <li tabindex="0">
+              <details>
+                <summary>{t('nav.language')}</summary>
+                <LanguagePicker />
+              </details>
+            </li>
+        </ul>
+    </div>
+</nav>
