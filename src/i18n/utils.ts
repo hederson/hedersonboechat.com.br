@@ -9,6 +9,18 @@ export function getLangFromUrl(url: URL) {
   return defaultLang;
 }
 
+export function getLangFromUrlString(url: string) {
+  const [, lang] = url.split('/');
+  if (lang in ui) return lang as keyof typeof ui;
+  return defaultLang;
+}
+
+export function createBlogUrl(slug: string) {
+  const lang = `/${getLangFromUrlString(slug)}`; 
+  const [_, ...slugParts] = slug.split('/');
+  return `${lang}/blog/${slugParts.join('/')}`;
+}
+
 export function useTranslations(lang: keyof typeof ui) {
   return function t(key: keyof typeof ui[typeof defaultLang]) {
     return ui[lang][key] || ui[defaultLang][key];

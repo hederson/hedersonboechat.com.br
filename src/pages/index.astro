@@ -1,25 +1,37 @@
 ---
 import type { InferGetStaticParamsType, InferGetStaticPropsType, GetStaticPaths } from 'astro';
 import { getCollection } from "astro:content";
-import { getLangFromUrl, useTranslations, useTranslatedPath, getPostFromLang  } from '../i18n/utils';
+import { getLangFromUrl, useTranslations, useTranslatedPath, getPostFromLang, createBlogUrl  } from '../i18n/utils';
 import Base from "../layouts/Base.astro"
 import { Image } from 'astro:assets';
 
 const pages = await getCollection('blog');
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const posts = await getPostFromLang(lang, 2);
+const posts = await getPostFromLang(lang, 10);
 
 ---
 <Base title={t('meta.title')} description={t('meta.description')}>
     <h1>Index</h1>
 
-    {posts.map((post)=> {
-        return (
-            <div>
-                <h1>{post.data.title}</h1>                
-                <p>{post.data.metaDescription}</p>
-            </div>
-        )
-    })}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-3">
+        {posts.map((post)=> {
+            return (                                  
+            <article class="card w-96 bg-neutral shadow-xl">                        
+                <figure>
+                    <img class="object-cover w-96 h-48" src={post.data.image.url} alt={post.data.image.alt} />
+                </figure>
+                <div class="card-body">
+                    <a href={createBlogUrl(post.slug)}>
+                        <h2 class="card-title">{post.data.title}</h2>  
+                    </a>              
+                    <p>{post.data.metaDescription}</p>
+                    <div class="card-actions items-center">
+                        <a class="btn btn-secondary" href={createBlogUrl(post.slug)}>Read</a>
+                    </div>
+                </div>
+            </article>
+            )
+        })}
+    </div>
 </Base>
