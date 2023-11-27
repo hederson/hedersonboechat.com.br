@@ -18,15 +18,16 @@ export async function getStaticPaths() {
 const { lang, slug } = Astro.params;
 const entry = Astro.props;
 const formattedDate = entry.data.pubDate.toLocaleString(lang);
+
 const posts = await getPostFromLang(lang)
-
-console.log("------")
-posts.forEach(post => console.log(post.data.title))
-
-
 const { Content } = await entry.render();
 ---
-<Post title={entry.data.title} description={entry.data.metaDescription}> 
-  <img src={entry.data.image.url} alt={entry.data.title} />
+<Post title={entry.data.title} 
+      description={entry.data.metaDescription} 
+      imageUrl={entry.data.image.url}
+      imageAlt={entry.data.image.alt}
+      pubDate={formattedDate}
+      lang={lang}> 
+  <!-- <img src={entry.data.image.url} alt={entry.data.title} /> -->
   <Content/>
 </Post>

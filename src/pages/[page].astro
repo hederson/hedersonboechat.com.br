@@ -1,8 +1,8 @@
 ---
 import type { InferGetStaticParamsType, InferGetStaticPropsType, GetStaticPaths } from 'astro';
 import { getCollection } from "astro:content";
-import { getLangFromUrl, useTranslations, useTranslatedPath, getPostFromLang  } from '../../i18n/utils';
-import Base from "../../layouts/Base.astro"
+import { getLangFromUrl, useTranslations, useTranslatedPath, getPostFromLang  } from '../i18n/utils';
+import Base from "../layouts/Base.astro"
 import { Image } from 'astro:assets';
 
 const pages = await getCollection('blog');

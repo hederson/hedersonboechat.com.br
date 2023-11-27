@@ -1,20 +1,43 @@
 ---
 import Base from './Base.astro'
+import { getLangFromUrl, useTranslations, useTranslatedPath, getPostFromLang, createBlogUrl  } from '../i18n/utils';
+import type { ui } from '../i18n/ui';
 
 interface Props {
     title: string
-    description: string
+    pubDate: string,
+    description: string,
+    imageUrl?: string,
+    imageAlt?: string,
+    lang: string 
 }
 
 const props = Astro.props
+const t = useTranslations(props.lang as keyof typeof ui);
 ---
 <Base title={props.title} description={props.description}>
     <main>
-        <article>
-            <header>
-                <h1>{ props.title }</h1>
-            </header>
-            <slot />
+        <article class="card bg-base-300 shadow-xl mt-10">            
+                {props.imageUrl && 
+                <figure>
+                    <img src={ props.imageUrl } alt={ props.imageAlt } class="object-cover md:h-[36rem] w-full mx-auto"/>
+                </figure>
+                }
+            <div class="card-body">
+                <header>
+                    <h1 class="text-4xl mt-10 text-secondary font-bold">{ props.title }</h1>
+                </header>
+                <div class="flex mb-10">
+                    <span>{t('span.published')} {props.pubDate}</span> 
+                </div>
+                <slot />
+            </div>
         </article>
     </main>
 </Base>
+
+<style is:global>
+    h2{
+        @apply text-2xl font-bold text-secondary;
+    }
+</style>

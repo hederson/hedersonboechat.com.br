@@ -2,7 +2,7 @@
 title: 'Comece por aqui.'
 pubDate: 2023-11-16
 author: 'Astro Learner'
-draft: false
+draft: true
 metaDescription: Meta description here
 image:
     url: '/images/life_is_now.jpg'
