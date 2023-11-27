@@ -6,10 +6,10 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
-<ul class="p-2">
+<ul class="p-2 bg-base-300">
   {Object.entries(languages).map(([lang, label]) => (
     <li>
-      <a href={translatePath('/', lang)}>{label}</a>
+      <a class="hover:bg-base-100" href={translatePath('/', lang)}>{label}</a>
     </li>
   ))}
 </ul>

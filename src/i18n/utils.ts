@@ -10,7 +10,7 @@ export function getLangFromUrl(url: URL) {
 }
 
 export function getLangFromUrlString(url: string) {
-  const [, lang] = url.split('/');
+  const [lang, ..._] = url.split('/');
   if (lang in ui) return lang as keyof typeof ui;
   return defaultLang;
 }
@@ -35,7 +35,7 @@ export function useTranslatedPath(lang: keyof typeof ui) {
 
 export async function getPostFromLang(lang: string, quantity? : number){
     let blogEntries = await getCollection('blog');   
-    blogEntries = blogEntries.filter((entry) => entry.slug.startsWith(`${lang}/`));
+    blogEntries = blogEntries.filter((entry) => entry.slug.startsWith(`${lang}/`) && !entry.data.draft);
     
     if(quantity === undefined)
       return blogEntries;

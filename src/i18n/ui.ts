@@ -12,7 +12,8 @@ export const languages = {
       'nav.twitter': 'Twitter',
       'nav.language': 'Language',
       'meta.description': 'A blog about learning a Solopreneur lifestyle and technologies.',
-      'meta.title': 'Hederson Boechat - Solopreneur and Technologies'
+      'meta.title': 'Hederson Boechat - Solopreneur and Technologies',
+      'button.read': 'Read more'
     },
     'pt-br': {
       'nav.home': 'Home',
@@ -20,7 +21,8 @@ export const languages = {
       'nav.twitter': 'Twitter',
       'nav.language': 'Idioma',
       'meta.description': 'Um blog sobre empreendedorismo e tecnologias.',
-      'meta.title': 'Hederson Boechat - Empreendedorismo e Tecnologias'
+      'meta.title': 'Hederson Boechat - Empreendedorismo e Tecnologias',
+      'button.read': 'Leia mais'
     },
   } as const;
 
