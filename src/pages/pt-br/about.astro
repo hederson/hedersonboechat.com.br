@@ -1,0 +1,45 @@
+---
+import { getCollection } from "astro:content";
+import { getLangFromUrl, useTranslations, useTranslatedPath, getPostFromLang, createBlogUrl  } from '../../i18n/utils';
+import Base from "../../layouts/Base.astro"
+import SocialMedia from "../../components/SocialMedia.astro";
+import { Image } from 'astro:assets';
+import hedersonImage from '../../images/hederson-boechat.jpg';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<Base title={t('meta.title')} description={t('meta.description')}> 
+    <article class="bg-base-200 flex p-10 flex-wrap md:flex-nowrap">
+        <section class="w-full p-0 lg:pr-10 lg:pt-10 order-2 md:order-1">
+            <Image src={hedersonImage} alt="Picture of the author Hederson Boechat" class="rounded-full w-32 h-32 mx-auto" />
+            <h2 class="text-center mt-2">Hederson Boechat</h2>
+            <div class="flex justify-center gap-3 mt-2">                
+                <SocialMedia />
+            </div>
+            <div class="flex justify-center mt-5 w-full">
+                <a href="https://calendly.com/hedersonboechat/15min" class="btn btn-secondary break-words">
+                    Agende uma conversa
+                    <br />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                    </svg>                      
+                </a>
+            </div>
+        </section>
+        <section class="order-1 md:order-2 mb-10 md:mb-0">
+            <h1 class="text-4xl font-bold">Software Engineer, founder, and product builder</h1>
+            <p class="mt-10">
+                <h2 class="text-xl font-bold  text-secondary mb-2">Sobre mim</h2>
+                Eu sou Hederson Boechat, trabalho com a desenvolvimento de softwares desde 2013. 
+                Além disso, estou desenvolvendo meus próprios produtos com tudo que aprendi ao longo desses anos.
+            </p>
+            <p class="mt-10">
+                <h2 class="text-xl font-bold text-secondary mb-2">Sobre esse blog</h2>
+                Este blog tem como objetivo ser uma plataforma para compartilhar todas as minhas experiências, seja relacionado ao que estou aprendendo ou fazendo. 
+                Atualmente, tenho paixão por criar produtos de software como serviço tambem conhecido como SaaS. 
+                Aqui você irá encontrar conteúdo abordando aspectos técnicos, assim como tópicos mais voltados para o mundo dos negócios, como marketing e vendas.
+            </p>
+        </section>     
+    </article>
+</Base>

@@ -1,10 +1,11 @@
 ---
 import type { InferGetStaticParamsType, InferGetStaticPropsType, GetStaticPaths } from 'astro';
 import { getCollection } from "astro:content";
-import { getLangFromUrl, useTranslations, useTranslatedPath, getPostFromLang, createBlogUrl  } from '../i18n/utils';
-import Base from "../layouts/Base.astro"
+import { getLangFromUrl, useTranslations, useTranslatedPath, getPostFromLang, createBlogUrl  } from '../../i18n/utils';
+import Base from "../../layouts/Base.astro"
 import { Image } from 'astro:assets';
 
+const pages = await getCollection('blog');
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const posts = await getPostFromLang(lang, 10);
@@ -32,7 +33,7 @@ const posts = await getPostFromLang(lang, 10);
                         <div class="flex-1 flex flex-wrap gap-1">
                             {post.data.tags.map((tag)=> {
                                 return (
-                                    <div class="badge badge-natural">{tag}</div>
+                                    <div class="badge badge-natural badge-outline ">{tag}</div>
                                 )
                             })}
                         </div>

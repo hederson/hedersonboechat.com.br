@@ -1,0 +1,46 @@
+---
+import { getLangFromUrl } from '../i18n/utils';
+import LanguagePicker from '../components/LanguagePicker.astro';
+import SocialMedia from '../components/SocialMedia.astro';
+import NavBar from '../components/NavBar.astro';
+const lang = getLangFromUrl(Astro.url);
+
+interface Props {
+    title: string
+    description: string
+}
+
+const props = Astro.props
+---
+<html lang={lang}>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <title>{props.title}</title>
+        <meta name="description" content={props.description} />        
+    </head>
+    <body>
+        <div class="bg-neutral">
+            <div class="mx-auto max-w-screen-xl">    
+                <NavBar >
+            </div>
+        </div>
+        <main class="mx-auto max-w-screen-xl">
+            <slot />
+        </main>        
+        <footer class="footer footer-center p-10 bg-base-300 text-base-content mt-10">
+            <aside>              
+              <p class="font-bold">
+                Hederson Boechat <br/>Building reliable tech since 2013
+              </p> 
+              <p>Copyright © 2023 - All right reserved</p>
+            </aside> 
+            <nav>
+              <div class="grid grid-flow-col gap-4">
+                <SocialMedia />
+              </div>
+            </nav>
+          </footer>
+    </body>
+</html>
