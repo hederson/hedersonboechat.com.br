@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/hederson/hedersonboechat.com.br/compare/v0.0.3...v1.0.0) (2023-11-28)
+
+
+### Features
+
+* create first post (wip) ([7d96d74](https://github.com/hederson/hedersonboechat.com.br/commit/7d96d74a573b0e036b44c57e0ad0d313cd57a3e4))
+
 ### [0.0.3](https://github.com/hederson/hedersonboechat.com.br/compare/v0.0.2...v0.0.3) (2023-11-27)
 
 
