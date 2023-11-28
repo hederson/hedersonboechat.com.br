@@ -9,7 +9,9 @@ export default defineConfig({
   base: '/',
   integrations: [tailwind(), sitemap(
     {
-      i18n: {
+      changefreq: 'weekly',
+      lastmod: new Date(),
+      i18n: {        
         defaultLocale: 'en', // All urls that don't contain `es` or `fr` after `https://stargazers.club/` will be treated as default locale, i.e. `en`
         locales: {
           en: 'en-US',
