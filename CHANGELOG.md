@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/hederson/hedersonboechat.com.br/compare/v1.2.0...v1.3.0) (2023-11-28)
+
+
+### Features
+
+* added sitemap lastmod ([1310de4](https://github.com/hederson/hedersonboechat.com.br/commit/1310de4b8c4f8d173ac81ef05b14d2c13674ff44))
+
 ## [1.2.0](https://github.com/hederson/hedersonboechat.com.br/compare/v1.1.0...v1.2.0) (2023-11-28)
 
 
