@@ -16,7 +16,7 @@ const props = Astro.props
 const t = useTranslations(props.lang as keyof typeof ui);
 ---
 <Base title={props.title} description={props.description}>
-    <main>
+    <main class="post">
         <article class="card bg-base-300 shadow-xl mt-10">            
                 {props.imageUrl && 
                 <figure>
@@ -37,19 +37,19 @@ const t = useTranslations(props.lang as keyof typeof ui);
 </Base>
 
 <style is:global>
-    h2, h3{
+    .post h2, .post h3{
        @apply font-bold text-neutral-content mt-5;
     }
 
-    h2{
+    .post h2{
         @apply text-3xl;
     }
 
-    h3{
+    .post h3{
         @apply text-2xl;
     }
     
-    p{
+    .post p{
         @apply text-lg;
     }
 
