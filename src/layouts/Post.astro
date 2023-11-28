@@ -25,7 +25,7 @@ const t = useTranslations(props.lang as keyof typeof ui);
                 }
             <div class="card-body">
                 <header>
-                    <h1 class="text-4xl mt-10 text-secondary font-bold">{ props.title }</h1>
+                    <h1 class="text-6xl mt-10 text-secondary font-bold">{ props.title }</h1>
                 </header>
                 <div class="flex mb-10">
                     <span>{t('span.published')} {props.pubDate}</span> 
@@ -37,7 +37,20 @@ const t = useTranslations(props.lang as keyof typeof ui);
 </Base>
 
 <style is:global>
-    h2{
-        @apply text-2xl font-bold text-secondary;
+    h2, h3{
+       @apply font-bold text-neutral-content mt-5;
     }
+
+    h2{
+        @apply text-3xl;
+    }
+
+    h3{
+        @apply text-2xl;
+    }
+    
+    p{
+        @apply text-lg;
+    }
+
 </style>
