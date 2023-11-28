@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/hederson/hedersonboechat.com.br/compare/v1.0.0...v1.1.0) (2023-11-28)
+
+
+### Features
+
+* add clarity analytics tracker ([94f779a](https://github.com/hederson/hedersonboechat.com.br/commit/94f779af9ebe08e07aa3f691c199d75b6a85663f))
+
+
+### Bug Fixes
+
+* post layout ([bd4695d](https://github.com/hederson/hedersonboechat.com.br/commit/bd4695d6104ee886c2a26d01572792642b7c397d))
+
 ## [1.0.0](https://github.com/hederson/hedersonboechat.com.br/compare/v0.0.3...v1.0.0) (2023-11-28)
 
 
