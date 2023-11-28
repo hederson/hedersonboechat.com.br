@@ -1,10 +1,21 @@
 import { defineConfig } from 'astro/config';
-
 import tailwind from "@astrojs/tailwind";
+
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://hedersonboechat.com.br',
   base: '/',
-  integrations: [tailwind()]
+  integrations: [tailwind(), sitemap(
+    {
+      i18n: {
+        defaultLocale: 'en', // All urls that don't contain `es` or `fr` after `https://stargazers.club/` will be treated as default locale, i.e. `en`
+        locales: {
+          en: 'en-US',
+          'pt-br': 'pt-BR'
+        },
+      },
+    }
+  )]
 });
