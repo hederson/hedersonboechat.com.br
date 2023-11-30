@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/hederson/hedersonboechat.com.br/compare/v1.3.0...v1.4.0) (2023-11-30)
+
+
+### Features
+
+* continuing creating post about how to learn fast ([826aab5](https://github.com/hederson/hedersonboechat.com.br/commit/826aab55eb29f99501c8f9537cb368708fdee0b1))
+
 ## [1.3.0](https://github.com/hederson/hedersonboechat.com.br/compare/v1.2.0...v1.3.0) (2023-11-28)
 
 
