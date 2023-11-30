@@ -10,9 +10,9 @@ image:
 tags: ["self awareness", "learning in public"]
 ---
 
-## The one Million-dollar question
+## Intro
 
-This is the million-dollar, or even more, question that everyone tries to answer and claim the prize. If you're skeptical like me, you know there is no one-size-fits-all answer. However, in the following text, I'll try to teach you some concepts that I've learned, which have helped me acquire new knowledge.
+I've always been curious about everything that seemed at least interesting. After several years of learning many new things just to satisfy my curiosity, I have discovered a few things that can help us learn fast. I'll try to teach you some concepts that I've learned, which have helped me acquire new knowledge.
 
 ## Chunks
 
