@@ -20,4 +20,16 @@ I figured out very soon that when we start acquiring knowledge, our brain attemp
 
 I provided the most basic example with some obvious instances, but it applies to whatever we have learned. For instance, if you've learned the basics of sales or marketing, the next time you try to create a product, you'll probably think more about "how can I sell this?" and apply some techniques you've learned, compared to the past.
 
+The more you expose yourself to different content about the same subject, preferably from reliable sources, the more chunks you will create. These chunks will interconnect or link as you progress in the chosen subject.
+
+For example, I was reading three books about sales/marketing when I realized that many of the concepts proposed in the books can work together. This led to a lot of new ideas on how I could adapt the content to the product I was creating. To not extend this further, I would advise you to try to create a new chunk whenever possible.
+
+## Pratice
+
+I've seen a lot of people attempting to learn new things, and instead of practicing what they're learning, they often continue to read more and more content without applying the knowledge they've acquired. Whenever you learn something new, try to practice. For example, if you want to ride a bike, you need to practice. Of course, you can prepare by studying or getting some advice from others, but you'll only be able to ride if you try and, of course, fall a few times.
+
+You don't need to worry about failures; in life, we fail more than we succeed. Thomas Edison already said something about that:
+
+> I have not failed. I've just found 10,000 ways that won't work.
+
 ### **WIP**
