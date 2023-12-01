@@ -7,15 +7,15 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
 
-<nav class="navbar bg-neutral">
+<nav class="navbar bg-primary">
     <div class="navbar-start flex gap-2">
-        <a class="btn btn-ghost text-xl" href={translatePath('/')}>
+        <a class="btn btn-ghost text-xl text-primary-content" href={translatePath('/')}>
             Hederson Boechat
         </a>
        
     </div>
     <div class="navbar-end">        
-        <ul class="menu menu-horizontal px-1 z-50">
+        <ul class="menu menu-horizontal px-1 z-50 text-primary-content">
             <li>
                 <a href={translatePath('/about/')}>
                     {t('nav.about')}

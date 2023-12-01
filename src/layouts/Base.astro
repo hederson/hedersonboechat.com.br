@@ -28,16 +28,18 @@ const props = Astro.props
           })(window, document, "clarity", "script", "jxlpbzgfhu");
         </script> 
     </head>
-    <body>
-        <div class="bg-neutral">
+    <body class="flex flex-col h-screen">
+        <div class="bg-primary">
             <div class="mx-auto max-w-screen-xl">    
                 <NavBar >
             </div>
         </div>
-        <main class="mx-auto max-w-screen-xl">
-            <slot />
-        </main>        
-        <footer class="footer footer-center p-10 bg-base-300 text-base-content mt-10">
+        <div class="flex-grow">
+          <main class="mx-auto max-w-screen-xl">
+              <slot />
+          </main>      
+        </div>  
+        <footer class="footer footer-center p-8 bg-base-200 text-base-content mt-10">
             <aside>              
               <p class="font-bold">
                 Hederson Boechat <br/>Building reliable tech since 2013

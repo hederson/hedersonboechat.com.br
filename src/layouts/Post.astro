@@ -13,22 +13,24 @@ interface Props {
 }
 
 const props = Astro.props
+const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(props.lang as keyof typeof ui);
+const translatePath = useTranslatedPath(lang);
 ---
 <Base title={props.title} description={props.description}>
     <main class="post">
-        <article class="card bg-base-300 shadow-xl mt-10">            
+        <article class="bg-base-100 text-neutral">            
                 {props.imageUrl && 
                 <figure>
                     <img src={ props.imageUrl } alt={ props.imageAlt } class="object-cover md:h-[36rem] w-full mx-auto"/>
                 </figure>
                 }
-            <div class="card-body">
+            <div class="p-4 md:p-20">
                 <header>
-                    <h1 class="text-6xl mt-10 text-secondary font-bold">{ props.title }</h1>
+                    <h1 class="text-3xl md:text-5xl text-neutral font-bold">{ props.title }</h1>
                 </header>
-                <div class="flex mb-10">
-                    <span>{t('span.published')} {props.pubDate}</span> 
+                <div class="flex mb-10 mt-5 italic">
+                    <span>{t('span.published')} {props.pubDate} {t('span.by')} <a href={translatePath('/about/')}>Hederson Boechat</a></span> 
                 </div>
                 <slot />
             </div>
@@ -38,23 +40,27 @@ const t = useTranslations(props.lang as keyof typeof ui);
 
 <style is:global>
     .post h2, .post h3{
-       @apply font-bold text-neutral-content mt-5;
+       @apply font-bold text-neutral mt-5 mb-2;
     }
 
     .post h2{
-        @apply text-3xl;
+        @apply text-2xl md:text-3xl;
     }
 
     .post h3{
-        @apply text-2xl;
+        @apply text-xl md:text-2xl;
     }
     
     .post p{
-        @apply text-lg;
+        @apply text-neutral md:text-lg;
     }
 
     .post blockquote{
-        @apply p-4 my-4 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800;
+        @apply p-4 my-4 border-s-4 border-gray-300 bg-gray-50;
+    }
+
+    .post a{
+        @apply text-primary;
     }
 
 </style>
