@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/hederson/hedersonboechat.com.br/compare/v1.4.0...v1.5.0) (2023-12-01)
+
+
+### Features
+
+* changed the theme to something more readable ([b25d0ad](https://github.com/hederson/hedersonboechat.com.br/commit/b25d0adc6529bd7a472c341ff120f9c2ab6832f6))
+
 ## [1.4.0](https://github.com/hederson/hedersonboechat.com.br/compare/v1.3.0...v1.4.0) (2023-11-30)
 
 
