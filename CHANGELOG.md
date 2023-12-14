@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/hederson/hedersonboechat.com.br/compare/v1.5.0...v1.6.0) (2023-12-14)
+
+
+### Features
+
+* changed the index page for both languages ([08cc625](https://github.com/hederson/hedersonboechat.com.br/commit/08cc62549c372fc33c17c4417ebab31ebaf076ec))
+
+
+### Bug Fixes
+
+* corrigido vulnerabilidade ([f15be65](https://github.com/hederson/hedersonboechat.com.br/commit/f15be656f48372ac0155071f0b5e0f62a205bc16))
+* translation typo ([5168939](https://github.com/hederson/hedersonboechat.com.br/commit/516893990b9944a9bda2c21d918043b060bfa0b0))
+
 ## [1.5.0](https://github.com/hederson/hedersonboechat.com.br/compare/v1.4.0...v1.5.0) (2023-12-01)
 
 
