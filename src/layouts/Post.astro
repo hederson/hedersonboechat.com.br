@@ -30,7 +30,7 @@ const translatePath = useTranslatedPath(lang);
                     <h1 class="text-3xl md:text-5xl text-neutral font-bold">{ props.title }</h1>
                 </header>
                 <div class="flex mb-10 mt-5 italic">
-                    <span>{t('span.published')} {props.pubDate} {t('span.by')} <a href={translatePath('/about/')}>Hederson Boechat</a></span> 
+                    <span>{t('span.published')} {props.pubDate} {t('span.by')} <a href={translatePath('/')}>Hederson Boechat</a></span> 
                 </div>
                 <slot />
             </div>
