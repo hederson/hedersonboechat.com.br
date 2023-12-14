@@ -1,44 +1,10 @@
 ---
-import type { InferGetStaticParamsType, InferGetStaticPropsType, GetStaticPaths } from 'astro';
-import { getCollection } from "astro:content";
-import { getLangFromUrl, useTranslations, useTranslatedPath, getPostFromLang, createBlogUrl  } from '../../i18n/utils';
-import Base from "../../layouts/Base.astro"
-import { Image } from 'astro:assets';
 
-const pages = await getCollection('blog');
+import { getLangFromUrl } from '../../i18n/utils';
+import IndexTemplate from '../../layouts/IndexTemplate.astro';
+
 const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-const posts = await getPostFromLang(lang, 10);
 
 ---
-<Base title={t('meta.title')} description={t('meta.description')}>
-    <div class="flex flex-wrap flex-row justify-around">
-        {posts.map((post)=> {
-            return (                                  
-            <article class="card w-96 bg-base-200 shadow-xl mt-10">                        
-                <figure>
-                    <img class="object-cover w-96 h-48" src={post.data.image.url} alt={post.data.image.alt} />
-                </figure>
-                <div class="card-body">
-                    <a href={createBlogUrl(post.slug)}>
-                        <h2 class="card-title text-neutral font-bold">{post.data.title}</h2>  
-                    </a>              
-                    <p>{post.data.metaDescription}</p>
-                    <div class="card-actions flex ">
-                        <div class="flex-none">
-                            <a class="btn btn-primary text-neutral-content" href={createBlogUrl(post.slug)}>{t('button.read')}</a>
-                        </div>
-                        <div class="flex-1 flex flex-wrap gap-1">
-                            {post.data.tags.map((tag)=> {
-                                return (
-                                    <div class="badge badge-neutral badge-outline">{tag}</div>
-                                )
-                            })}
-                        </div>
-                    </div>
-                </div>
-            </article>
-            )
-        })}
-    </div>
-</Base>
+
+<IndexTemplate lang={lang} />
