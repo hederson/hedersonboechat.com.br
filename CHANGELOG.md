@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.2](https://github.com/hederson/hedersonboechat.com.br/compare/v1.6.1...v1.6.2) (2023-12-14)
+
+
+### Bug Fixes
+
+* invalid author path in post page ([e77453b](https://github.com/hederson/hedersonboechat.com.br/commit/e77453b24ccd7e0893577291f4f5f06a05351859))
+
 ### [1.6.1](https://github.com/hederson/hedersonboechat.com.br/compare/v1.6.0...v1.6.1) (2023-12-14)
 
 
