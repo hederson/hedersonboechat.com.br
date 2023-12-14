@@ -40,7 +40,7 @@ export const languages = {
       'span.about.blog': 'Sobre este blog',
       'span.about.description': 'Trabalho com a desenvolvimento de softwares desde 2013. Além disso, estou desenvolvendo meus próprios produtos com tudo que aprendi ao longo desses anos.',
       'span.about.description2': 'Este blog tem como objetivo ser uma plataforma para compartilhar todas as minhas experiências, seja relacionado ao que estou aprendendo ou fazendo. Atualmente, tenho paixão por criar produtos de software como serviço tambem conhecido como SaaS. Aqui você irá encontrar conteúdo abordando aspectos técnicos, assim como tópicos mais voltados para o mundo dos negócios, como marketing e vendas.',
-      'span.latest.post': 'Ultimos posts',
+      'span.latest.post': 'Últimos posts',
     },
   } as const;
 
