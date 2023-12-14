@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.1](https://github.com/hederson/hedersonboechat.com.br/compare/v1.6.0...v1.6.1) (2023-12-14)
+
+
+### Bug Fixes
+
+* removed unnecessary pages ([a8392b8](https://github.com/hederson/hedersonboechat.com.br/commit/a8392b832e56159d653d49a8a3f588b257c7cb45))
+
 ## [1.6.0](https://github.com/hederson/hedersonboechat.com.br/compare/v1.5.0...v1.6.0) (2023-12-14)
 
 
