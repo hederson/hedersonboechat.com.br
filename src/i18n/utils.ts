@@ -18,7 +18,7 @@ export function getLangFromUrlString(url: string) {
 export function createBlogUrl(slug: string) {
   const lang = `/${getLangFromUrlString(slug)}`; 
   const [_, ...slugParts] = slug.split('/');
-  return `${lang}/blog/${slugParts.join('/')}`;
+  return `${lang}/post/${slugParts.join('/')}`;
 }
 
 export function useTranslations(lang: keyof typeof ui) {

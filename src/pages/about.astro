@@ -8,7 +8,7 @@ import hedersonImage from '../images/hederson-boechat.jpg';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
-<Base title={t('meta.title')} description={t('meta.description')}> 
+<Base title={t('meta.title')} description={t('meta.description')} supressName={true}> 
     <article class="flex p-10 flex-wrap md:flex-nowrap">
         <section class="w-full p-0 lg:pr-10 lg:pt-10 order-2 md:order-1">
             <Image src={hedersonImage} alt="Picture of the author Hederson Boechat" class="rounded-full w-32 h-32 mx-auto" />

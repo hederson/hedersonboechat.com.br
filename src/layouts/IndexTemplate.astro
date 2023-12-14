@@ -1,0 +1,82 @@
+---
+import { useTranslations, getPostFromLang, createBlogUrl  } from '../i18n/utils';
+import Base from "./Base.astro"
+import { Image } from 'astro:assets';
+import hedersonImage from '../images/hederson-boechat.jpg';
+import SocialMedia from '../components/SocialMedia.astro';
+
+const {lang} = Astro.props
+const t = useTranslations(lang);
+const posts = await getPostFromLang(lang, 10);
+
+---
+<Base title={t('meta.title')} description={t('meta.description')} supressName={true}>     
+
+    <!-- <div class="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3"> -->
+    <article class="flex p-10 flex-wrap md:flex-nowrap">
+        <section class="w-full p-0 lg:pr-10 lg:pt-10 order-2 md:order-1">
+            <Image src={hedersonImage} alt="Picture of the author Hederson Boechat" class="rounded-full w-32 h-32 mx-auto" />
+            <h2 class="text-center text-2xl mt-2">Hederson Boechat</h2>            
+            <div class="flex justify-center gap-3 mt-2">   
+                <SocialMedia />
+            </div>
+            <div class="flex justify-center mt-10 w-full">
+                <a href="https://calendly.com/hedersonboechat/15min" class="btn btn-primary break-words" target="_blank">
+                    {t('button.schedule')}
+                    <br />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                    </svg>                      
+                </a>
+            </div>            
+        </section>
+        <section class="order-1 md:order-2 mb-10 md:mb-0 text-neutral">
+            <h1 class="text-4xl font-bold">{t('span.about.title')}</h1>
+            <div class="mt-10">
+                <h2 class="text-xl font-bold mb-2">{t('span.about.me')}</h2>
+                <p>                
+                    {t('span.about.description')}                
+                </p>
+            </div>
+            <div class="mt-10">
+                <h2 class="text-xl font-bold mb-2">{t('span.about.blog')}</h2>
+                <p>                
+                    {t('span.about.description2')}                
+                </p>
+            </div>
+        </section>     
+    </article>  
+    <div class="divider" />
+    <div class="flex justify-center">
+        <h1 class="text-3xl">{t('span.latest.post')}</h1>
+    </div>  
+    <div class="flex flex-wrap flex-row justify-around">        
+        {posts.map((post)=> {
+            return (                                  
+            <article class="card w-96 bg-base-200 shadow-xl mt-10">                        
+                <figure>
+                    <img class="object-cover w-96 h-48" src={post.data.image.url} alt={post.data.image.alt} />
+                </figure>
+                <div class="card-body">
+                    <a href={createBlogUrl(post.slug)}>
+                        <h2 class="card-title text-neutral font-bold">{post.data.title}</h2>  
+                    </a>              
+                    <p>{post.data.metaDescription}</p>
+                    <div class="card-actions flex ">
+                        <div class="flex-none">
+                            <a class="btn btn-primary text-neutral-content" href={createBlogUrl(post.slug)}>{t('button.read')}</a>
+                        </div>
+                        <div class="flex-1 flex flex-wrap gap-1">
+                            {post.data.tags.map((tag)=> {
+                                return (
+                                    <div class="badge badge-neutral badge-outline">{tag}</div>
+                                )
+                            })}
+                        </div>
+                    </div>
+                </div>
+            </article>
+            )
+        })}
+    </div>
+</Base>

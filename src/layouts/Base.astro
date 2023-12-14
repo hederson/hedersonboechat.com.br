@@ -8,6 +8,7 @@ const lang = getLangFromUrl(Astro.url);
 interface Props {
     title: string
     description: string
+    supressName: boolean
 }
 
 const props = Astro.props
@@ -31,7 +32,7 @@ const props = Astro.props
     <body class="flex flex-col h-screen">
         <div class="bg-primary">
             <div class="mx-auto max-w-screen-xl">    
-                <NavBar >
+                <NavBar supressName={props.supressName} >
             </div>
         </div>
         <div class="flex-grow">

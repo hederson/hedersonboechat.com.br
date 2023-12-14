@@ -1,8 +1,8 @@
 ---
 import type { InferGetStaticParamsType, InferGetStaticPropsType, GetStaticPaths } from 'astro';
 import { getCollection } from "astro:content";
-import { getLangFromUrl, useTranslations, useTranslatedPath, getPostFromLang  } from '../i18n/utils';
-import Base from "../layouts/Base.astro"
+import { getLangFromUrl, useTranslations, useTranslatedPath, getPostFromLang  } from '../../i18n/utils';
+import Base from "../../layouts/Base.astro"
 import { Image } from 'astro:assets';
 
 const pages = await getCollection('blog');
@@ -10,18 +10,23 @@ const lang = 'pt-br'
 const t = useTranslations(lang);
 export const getStaticPaths = (async ({ paginate }) => {
   // Load your data with fetch(), Astro.glob(), etc.
-  const lang = 'pt-br'
-  const posts = await getPostFromLang(lang);
+  const ptbr = 'pt-br'
+  const enUs = 'en'
+  const postsPtBr = await getPostFromLang(ptbr);
+  const postsEn = await getPostFromLang(enUs);
   //console.log("aqui 2")
   //const posts = await getCollection('blog');
   // Return a paginated collection of paths for all posts
-  return paginate(posts, { pageSize: 2 });
+    const posts = paginate(postsPtBr, { pageSize: 2 });
+    posts.push(...paginate(postsEn, { pageSize: 2 }));
+
+    return posts
 }) satisfies GetStaticPaths;
 
 const {page, } = Astro.props;
 
 ---
-<Base title={t('meta.title')} description={t('meta.description')}>
+<Base title={t('meta.title')} description={t('meta.description')} supressName={false}>
     {page.data.map((post)=> {
         return (
             <div>
