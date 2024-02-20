@@ -17,7 +17,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(props.lang as keyof typeof ui);
 const translatePath = useTranslatedPath(lang);
 ---
-<Base title={props.title} description={props.description} supressName={false}>
+<Base title={props.title} description={props.description} supressName={false} image={props.imageUrl}>
     <main class="post">
         <article class="bg-base-100 text-neutral">            
                 {props.imageUrl && 
