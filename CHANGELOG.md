@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/hederson/hedersonboechat.com.br/compare/v1.6.2...v1.7.0) (2024-02-20)
+
+
+### Features
+
+* adiciona twitter card no meta do site ([401045c](https://github.com/hederson/hedersonboechat.com.br/commit/401045cee469ad4c3f41f2202acf45f9128770dd))
+* postagem migracão vue para blazor ([4b0b50c](https://github.com/hederson/hedersonboechat.com.br/commit/4b0b50c55a3586c65fb439c6902253d775a84a99))
+
+
+### Bug Fixes
+
+* corrigi url do twitter:image meta ([795c52d](https://github.com/hederson/hedersonboechat.com.br/commit/795c52db965493d643be46866eeefe41f1eb1e66))
+
 ### [1.6.2](https://github.com/hederson/hedersonboechat.com.br/compare/v1.6.1...v1.6.2) (2023-12-14)
 
 
