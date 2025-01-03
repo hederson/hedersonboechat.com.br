@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.1](https://github.com/hederson/hedersonboechat.com.br/compare/v1.8.0...v1.8.1) (2025-01-03)
+
+
+### Bug Fixes
+
+* **layout:** navbar error ([58c3098](https://github.com/hederson/hedersonboechat.com.br/commit/58c3098ec3ec97c5af7e69c7b61016f5ca499638))
+* pipeline build ([b91e652](https://github.com/hederson/hedersonboechat.com.br/commit/b91e6528a2c1dab56248b5edc3c97ca3684b2152))
+* **pipeline:** add pnpm@latest in the package manager ([605b95c](https://github.com/hederson/hedersonboechat.com.br/commit/605b95cc61f09931bdc8b80ca4608f85e373c17b))
+
 ## [1.8.0](https://github.com/hederson/hedersonboechat.com.br/compare/v1.7.0...v1.8.0) (2025-01-03)
 
 
