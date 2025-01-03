@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/hederson/hedersonboechat.com.br/compare/v1.7.0...v1.8.0) (2025-01-03)
+
+
+### Features
+
+* **post:** how to secure a vps ([8ed9814](https://github.com/hederson/hedersonboechat.com.br/commit/8ed98149f65c12d066ecc862ea850d7f295c644f))
+
 ## [1.7.0](https://github.com/hederson/hedersonboechat.com.br/compare/v1.6.2...v1.7.0) (2024-02-20)
 
 
