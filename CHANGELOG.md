@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.2](https://github.com/hederson/hedersonboechat.com.br/compare/v1.8.1...v1.8.2) (2025-01-03)
+
+
+### Bug Fixes
+
+* **pipeline:** fix deploy-page ([557f035](https://github.com/hederson/hedersonboechat.com.br/commit/557f0353aa0c2e25f6c3c42d178009d0fa6ccd81))
+
 ### [1.8.1](https://github.com/hederson/hedersonboechat.com.br/compare/v1.8.0...v1.8.1) (2025-01-03)
 
 
