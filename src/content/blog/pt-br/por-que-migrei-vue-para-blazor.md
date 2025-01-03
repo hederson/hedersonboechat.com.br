@@ -1,12 +1,12 @@
 ---
-title: 'Por que migrei de Vue para Blazor'
+title: "Por que migrei de Vue para Blazor"
 pubDate: 2024-02-20T13:23:49Z
-author: 'Hederson Boechat'
-draft: false
+author: "Hederson Boechat"
+draft: true
 metaDescription: Alguns dos motivos pelo qual eu migrei do VueJS para Blazor no frontend
 image:
-    url: '/images/tools-barn-images-unsplash.jpg'
-    alt: 'The full Astro logo.'
+  url: "/images/tools-barn-images-unsplash.jpg"
+  alt: "The full Astro logo."
 tags: ["saas", "programação", "blazor", "dotnet"]
 ---
 

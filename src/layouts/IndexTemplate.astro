@@ -61,7 +61,7 @@ const posts = await getPostFromLang(lang, 10);
                     <a href={createBlogUrl(post.slug)}>
                         <h2 class="card-title text-neutral font-bold">{post.data.title}</h2>  
                     </a>              
-                    <p>{post.data.metaDescription}</p>
+                    <p>{post.data.description ?? post.data.metaDescription}</p>
                     <div class="card-actions flex ">
                         <div class="flex-none">
                             <a class="btn btn-primary text-neutral-content" href={createBlogUrl(post.slug)}>{t('button.read')}</a>

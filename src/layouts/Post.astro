@@ -40,7 +40,7 @@ const translatePath = useTranslatedPath(lang);
 
 <style is:global>
     .post h2, .post h3{
-       @apply font-bold text-neutral mt-5 mb-2;
+       @apply font-bold text-neutral mt-10 mb-2;
     }
 
     .post h2{
@@ -55,12 +55,30 @@ const translatePath = useTranslatedPath(lang);
         @apply text-neutral md:text-lg mt-4;
     }
 
+    .post ul > li {
+        @apply text-neutral md:text-lg
+    }
+
     .post blockquote{
         @apply p-4 my-4 border-s-4 border-gray-300 bg-gray-50;
     }
 
     .post a{
         @apply text-primary;
+    }
+
+    .post ul{
+        list-style: disc;
+        @apply pr-4 ml-7 mt-3;
+    }
+
+    pre.astro-code {
+        @apply p-4 mt-4;
+    }
+
+    code{
+        @apply text-white;
+        background-color: #24292e;
     }
 
 </style>

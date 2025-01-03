@@ -13,7 +13,7 @@ export default defineConfig({
       changefreq: "weekly",
       lastmod: new Date(),
       i18n: {
-        defaultLocale: "pt-BR", // All urls that don't contain `es` or `fr` after `https://stargazers.club/` will be treated as default locale, i.e. `en`
+        defaultLocale: "en", // All urls that don't contain `es` or `fr` after `https://stargazers.club/` will be treated as default locale, i.e. `en`
         locales: {
           en: "en-US",
           "pt-br": "pt-BR",
