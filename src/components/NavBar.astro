@@ -3,7 +3,7 @@ import { getLangFromUrl, useTranslations, useTranslatedPath  } from '../i18n/uti
 import LanguagePicker from '../components/LanguagePicker.astro';
 
 interface Props{
-    supressName: false
+    supressName: boolean
 }
 
 const lang = getLangFromUrl(Astro.url);

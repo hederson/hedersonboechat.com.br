@@ -1,5 +1,5 @@
 ---
-title: "How to create a secure VPS in any provider?"
+title: "Create a secure and reliable VPS in any provider"
 pubDate: 2024-12-30T13:09:49Z
 author: "Hederson Boechat"
 draft: false
